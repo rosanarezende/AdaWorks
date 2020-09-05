@@ -5,10 +5,10 @@ export const setOpen = (option) => ({
   }
 })
 
-export const setMessage = (title, text) => ({
+export const setMessage = (text, color) => ({
   type: "SET_MESSAGE",
   payload: {
-      title,
-      text
+      text,
+      color
   }
 })

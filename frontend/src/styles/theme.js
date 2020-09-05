@@ -32,7 +32,8 @@ export default createMuiTheme({
   typography: {
     button: {
       textTransform: 'none',
-      fontWeight: '400'
+      fontWeight: '400',
+      fontSize: '16px'      
     }
   }
 });
