@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Appbar from "../../containers/Appbar";
+import { PageWrapper } from "../../components/PageWrapper";
 
 function LoginPage() {
   return (
-    <div>
-      LoginPage
-    </div>
-  )
+    <PageWrapper>
+      <Appbar page="login" />
+      <div>LoginPage</div>
+    </PageWrapper>
+  );
 }
 
-export default LoginPage
+export default LoginPage;
