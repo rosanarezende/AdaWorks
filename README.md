@@ -43,8 +43,7 @@ xxxx.
 ### Designer
 
 <div align="center">
-[<img src="" width=115><br><sub>Gabriella</sub>](link) |
-| :---:
+Gabriella Feliciano
 </div>
 
 <br>
@@ -53,7 +52,7 @@ xxxx.
 
 <div align="center">
 
-| [<img src="" width=115><br><sub>Júlia Stefanoni</sub>](https://github.com/MacksonWelton)<br><sub>Backend</sub> |  [<img src="https://avatars1.githubusercontent.com/u/45580434?s=460&u=07188d0258859fc94b46983bcb85c09b4d7c5daf&v=4" width=115><br><sub>Rosana Carolino Rezende</sub>](https://github.com/rosanarezende)<br><sub>Frontend</sub> |
+| [<img src="https://media-exp1.licdn.com/dms/image/C4E03AQE_YHJuXQUr-A/profile-displayphoto-shrink_400_400/0?e=1604534400&v=beta&t=vkC__X2c8hWE5IV0URkGtzJDX1R7HPqbuxrWbsNaPQc" width=115><br><sub>Júlia Stefanoni Mendes</sub>](https://www.linkedin.com/in/juliastefanonidev/)<br><sub>Backend</sub> |  [<img src="https://avatars1.githubusercontent.com/u/45580434?s=460&u=07188d0258859fc94b46983bcb85c09b4d7c5daf&v=4" width=115><br><sub>Rosana Carolino Rezende</sub>](https://www.linkedin.com/in/rosanarezende/)<br><sub>Frontend</sub> |
 | :---: | :---: 
 
 </div>
@@ -70,7 +69,8 @@ xxxx.
 ### Negócios
 
 <div align="center">
-[<img src="" width=115><br><sub>Isabella Paz</sub>](link) |
+
+[<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGYFriN3AXljA/profile-displayphoto-shrink_400_400/0?e=1604534400&v=beta&t=hZRKrlGSyUTi8vUQAmxcPD9cvAzG-BP6mgjwQvLjbxs" width=115><br><sub>Isabella Oliveira Ribeiro da Paz</sub>](https://www.linkedin.com/in/iorp/) |
 | :---:
 </div>
 
