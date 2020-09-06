@@ -7,7 +7,6 @@ export const Header = styled.div`
   padding: 36px 10vw;
 
   @media screen and (max-width: 800px) {
-    margin-top: -24px;
     display: flex;
     justify-content: center;
   }

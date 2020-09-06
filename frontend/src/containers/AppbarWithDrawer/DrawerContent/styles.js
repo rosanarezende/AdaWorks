@@ -19,6 +19,9 @@ export const Header = styled.header`
   justify-content: center;
   align-items: center;
   margin-bottom: 2vh;
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 4vh;
+  }
 `;
 
 export const AvatarStyled = styled(Avatar)`
@@ -39,6 +42,7 @@ export const Links = styled.nav`
 export const Schedule = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 2vh;
   li {
     padding: 8px 0;
   }
@@ -78,5 +82,9 @@ export const Configuration = styled.footer`
 
   img {
     margin: 15px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    position: inherit;
   }
 `;
