@@ -60,7 +60,7 @@ Gabriella Feliciano
 ### Marketing
 
 <div align="center">
-[<img src="" width=115><br><sub>Camille Labanca</sub>](link) |
+[<img src="https://media-exp1.licdn.com/dms/image/C4D03AQEu4vtjOZTbBw/profile-displayphoto-shrink_400_400/0?e=1605139200&v=beta&t=lupiNlIDpADveCVZ7x-Mhz5Ech2VUlr7y73wZOG60-M" width=115><br><sub>Camille Thomaz Labanca</sub>](https://www.linkedin.com/in/camillelabanca/) |
 | :---:
 </div>
 

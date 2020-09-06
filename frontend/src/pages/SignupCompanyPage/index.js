@@ -7,6 +7,7 @@ import Appbar from "../../containers/Appbar";
 import Bottonbar from "../../containers/Bottonbar";
 import Message from "../../components/Message";
 import InputsWrapper from "../../components/InputsWrapper";
+import Pricing from "./components/Princing";
 
 import { PageWrapper } from "../../components/PageWrapper";
 
@@ -20,6 +21,7 @@ import * as S from "./styles";
 
 function SignupCompanyPage() {
   const [formInfo, setFormInfo] = useState({});
+  const [formAppears, setFormAppears] = useState(false);
   const [hire, setHire] = useState(false);
   const [authorization, setAuthorization] = useState(false);
   const [privacy, setPrivacy] = useState(false);
@@ -43,7 +45,8 @@ function SignupCompanyPage() {
       placeholder: "00.000.000/0000-00",
       type: "text",
       required: true,
-      pattern: "[0-9]{2,}[.]{1,}[0-9]{3,}[.]{1,}[0-9]{3,}[/]{1,}[0-9]{4,}[-]{1,}[0-9]{2,}",
+      pattern:
+        "[0-9]{2,}[.]{1,}[0-9]{3,}[.]{1,}[0-9]{3,}[/]{1,}[0-9]{4,}[-]{1,}[0-9]{2,}",
       title: "Digite o CNPJ da empresa com pontos, barra e traço.",
     },
     {
@@ -123,11 +126,11 @@ function SignupCompanyPage() {
 
   const cnpjMask = (value) => {
     return value
-      .replace(/\D/g, '')
-      .replace(/(\d{2})(\d)/, "$1.$2") 
+      .replace(/\D/g, "")
+      .replace(/(\d{2})(\d)/, "$1.$2")
       .replace(/(\d{3})(\d)/, "$1.$2")
       .replace(/(\d{3})(\d{1,2})/, "$1/$2")
-      .replace(/(\d{4})(\d{1,2})/, "$1-$2")     
+      .replace(/(\d{4})(\d{1,2})/, "$1-$2")
       .replace(/(-\d{2})\d+?$/, "$1");
   };
 
@@ -164,8 +167,26 @@ function SignupCompanyPage() {
       return;
     }
 
-    const { companyName, cnpj, name, positionInCompany, email, nickname, password, confirm } = formInfo;
-    const data = { companyName, cnpj, name, positionInCompany, email, nickname, password, hire };
+    const {
+      companyName,
+      cnpj,
+      name,
+      positionInCompany,
+      email,
+      nickname,
+      password,
+      confirm,
+    } = formInfo;
+    const data = {
+      companyName,
+      cnpj,
+      name,
+      positionInCompany,
+      email,
+      nickname,
+      password,
+      hire,
+    };
     if (password !== confirm) {
       dispatch(setMessage("Senhas não conferem!", "red"));
       dispatch(setOpen(true));
@@ -180,57 +201,67 @@ function SignupCompanyPage() {
     <>
       <PageWrapper>
         <Appbar page="signup" />
-        <S.Form onSubmit={handleSubmission}>
-          <InputsWrapper
-            list={createNewCompany}
-            formInfo={formInfo}
-            getFormInfo={getFormInfo}
-          />
 
-          <S.OptionsWrapper>
-            <FormControl component="fieldset">
-              <FormGroup>
-                <S.Option
-                  control={
-                    <Checkbox
-                      color="primary"
-                      checked={hire}
-                      onChange={(e) => setHire(e.target.checked)}
-                      name="hire"
-                    />
-                  }
-                  label="Desejo recrutar candidatas para vagas."
-                />
-                <S.Option
-                  control={
-                    <Checkbox
-                      color="primary"
-                      checked={authorization}
-                      onChange={(e) => setAuthorization(e.target.checked)}
-                      name="authorization"
-                    />
-                  }
-                  label="Represento o departamento de RH, recrutamento, marketing ou relações públicas ou sou executiv@ nessa empresa."
-                />
-                <S.Option
-                  control={
-                    <Checkbox
-                      color="primary"
-                      checked={privacy}
-                      onChange={(e) => setPrivacy(e.target.checked)}
-                      name="privacy"
-                    />
-                  }
-                  label="Concordo com os Termos de Uso e com a Política de Privacidade."
-                />
-              </FormGroup>
-            </FormControl>
-          </S.OptionsWrapper>
+        <S.Title color="primary" variant="h5" align="center">
+          Traga sua empresa para a Adaworks e conheça mulheres incríveis na área
+          de T.I.
+        </S.Title>
 
-          <S.ButtonWrapper type="submit" variant="contained" color="primary">
-            Cadastrar
-          </S.ButtonWrapper>
-        </S.Form>
+        <Pricing setFormAppears={setFormAppears} formAppears={formAppears}/>
+
+        {formAppears && (
+          <S.Form onSubmit={handleSubmission}>
+            <InputsWrapper
+              list={createNewCompany}
+              formInfo={formInfo}
+              getFormInfo={getFormInfo}
+            />
+
+            <S.OptionsWrapper>
+              <FormControl component="fieldset">
+                <FormGroup>
+                  <S.Option
+                    control={
+                      <Checkbox
+                        color="primary"
+                        checked={hire}
+                        onChange={(e) => setHire(e.target.checked)}
+                        name="hire"
+                      />
+                    }
+                    label="Desejo recrutar candidatas para vagas."
+                  />
+                  <S.Option
+                    control={
+                      <Checkbox
+                        color="primary"
+                        checked={authorization}
+                        onChange={(e) => setAuthorization(e.target.checked)}
+                        name="authorization"
+                      />
+                    }
+                    label="Represento o departamento de RH, recrutamento, marketing ou relações públicas ou sou executiv@ nessa empresa."
+                  />
+                  <S.Option
+                    control={
+                      <Checkbox
+                        color="primary"
+                        checked={privacy}
+                        onChange={(e) => setPrivacy(e.target.checked)}
+                        name="privacy"
+                      />
+                    }
+                    label="Concordo com os Termos de Uso e com a Política de Privacidade."
+                  />
+                </FormGroup>
+              </FormControl>
+            </S.OptionsWrapper>
+
+            <S.ButtonWrapper type="submit" variant="contained" color="primary">
+              Cadastrar
+            </S.ButtonWrapper>
+          </S.Form>
+        )}
       </PageWrapper>
       <Bottonbar />
       {open && <Message />}
