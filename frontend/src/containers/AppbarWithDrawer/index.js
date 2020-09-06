@@ -48,6 +48,7 @@ function AppbarWithDrawer(props) {
           className={clsx(classes.appBar, {
             [classes.appBarShift]: openDrawer,
           })}
+          elevation={props.page === "woman-profile" ? 0 : 4}
         >
           <Toolbar>
             <IconButton
