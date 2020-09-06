@@ -142,6 +142,8 @@ function SignupWomanPage() {
       dispatch(setOpen(true));
     } else {
       console.log(data);
+      dispatch(setMessage("Funcionalidade ainda não finalizada", "red"));
+      dispatch(setOpen(true));
       // dispatch(signup(data))
       // setFormInfo({})
     }

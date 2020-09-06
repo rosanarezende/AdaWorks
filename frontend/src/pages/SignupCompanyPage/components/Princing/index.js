@@ -32,9 +32,9 @@ function Pricing({ formAppears, setFormAppears }) {
         "crie a página da marca",
         "adicione as políticas empresariais",
         "veja o que estão falando da sua organização",
-        "publique as vagas abertas",
-        "receba currículos de mulheres interessadas",
-        "mostre quais eventos sua empresa apoia",
+        "publique as vagas abertas *",
+        "receba currículos de mulheres interessadas *",
+        "mostre quais eventos sua empresa apoia *",
       ],
       buttonText: "Contate-nos",
       buttonVariant: "contained",
@@ -48,6 +48,7 @@ function Pricing({ formAppears, setFormAppears }) {
         "publique as vagas abertas",
         "receba currículos de mulheres interessadas",
         "mostre quais eventos sua empresa apoia",
+        "gerencie processos seletivos direto da plataforma *"
       ],
       buttonText: "Contate-nos",
       buttonVariant: "outlined",
@@ -73,7 +74,7 @@ function Pricing({ formAppears, setFormAppears }) {
                     {tier?.description?.map((line) => (
                       <ListItem key={line}>
                         <ListItemIcon style={{ margin: "0" }}>
-                          <Done />
+                          <Done color="primary" />
                         </ListItemIcon>
                         <ListItemText primary={line} />
                       </ListItem>

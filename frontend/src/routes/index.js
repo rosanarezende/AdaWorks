@@ -10,6 +10,7 @@ import LoginPage from "../pages/LoginPage";
 import SignupPage from "../pages/SignupPage";
 import SignupCompanyPage from "../pages/SignupCompanyPage";
 import SignupWomanPage from "../pages/SignupWomanPage";
+import WomanProfilePage from "../pages/WomanProfilePage";
 
 function Routes(props) {
 	const { history } = props
@@ -22,6 +23,7 @@ function Routes(props) {
         <Route exact path={routes.signup} component={SignupPage} />
         <Route exact path={routes.signupCompany} component={SignupCompanyPage} />
         <Route exact path={routes.signupWoman} component={SignupWomanPage} />
+        <Route exact path={routes.womanProfile} component={WomanProfilePage} />
 
         <Route path="*" component={NotFoundPage} />
       </Switch>

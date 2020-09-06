@@ -15,7 +15,10 @@ import { InputAdornment, Typography } from "@material-ui/core";
 import * as S from "./styles";
 
 function LoginPage() {
-  const [userInfo, setUserInfo] = useState({});
+  const [userInfo, setUserInfo] = useState({
+    input: "marinaduarte@email.com",
+    password: "123456"
+  });
   const [hidenPassword, setHidenPassword] = useState(false);
   const dispatch = useDispatch();
 
@@ -31,6 +34,7 @@ function LoginPage() {
   function sendUserInfo(e) {
     e.preventDefault();
     console.log(userInfo)
+    dispatch(push("/perfil/marinaduarte"))
     // dispatch(login(userInfo));
   }
 

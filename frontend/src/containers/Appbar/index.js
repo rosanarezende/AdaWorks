@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { push } from "connected-react-router";
 
 import { routes } from "../../routes/constants";
 
+import { setMessage, setOpen } from "../../actions/messages";
+
 import logoImg from "../../assets/images/logo.svg";
+
+import Message from "../../components/Message";
 
 import * as S from "./styles";
 import {
@@ -18,20 +22,25 @@ import { Menu as MenuIcon } from "@material-ui/icons";
 
 function Appbar({ page }) {
   const dispatch = useDispatch();
-  const goToHome = push(routes.home);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const { open } = useSelector((state) => state.messages);
 
   const linksList = [
     { name: "Home", path: routes.home },
-    { name: "Mulheres", path: routes.home },
-    { name: "Empresas", path: routes.home },
-    { name: "Contato", path: routes.home },
+    { name: "Mulheres", path: routes.home, notFinalized: true },
+    { name: "Empresas", path: routes.home, notFinalized: true },
+    { name: "Contato", path: routes.home, notFinalized: true },
   ];
+
+  const development = () => {
+    dispatch(setMessage("Funcionalidade ainda não finalizada", "red"));
+    dispatch(setOpen(true));
+  };
 
   const links = linksList.map((link, index) => (
     <S.LinkStyled key={index}>
-      <Button color="primary" onClick={() => dispatch(push(link.path))}>
+      <Button color="primary" onClick={link.notFinalized === true ? development : () => dispatch(push(link.path))}>
         {link.name}
       </Button>
       <span>|</span>
@@ -93,13 +102,13 @@ function Appbar({ page }) {
   );
 
   return (
-    <div>
+    <>
       <S.AppBarStyled position="static" color="transparent" elevation={0}>
         <S.ToolbarStyled>
-          <S.Logo src={logoImg} alt="logo" onClick={() => dispatch(goToHome)} />
+          <S.Logo src={logoImg} alt="logo" onClick={() => dispatch(push(routes.home))} />
           <S.DivGrow />
           <S.SectionDesktop>{linksAppears && links}</S.SectionDesktop>
-          {buttons.length > 0 && <S.DivGrow /> }
+          {buttons.length > 0 && <S.DivGrow />}
           <S.SectionDesktop>
             {buttons?.map((item, index) => (
               <Button
@@ -126,7 +135,8 @@ function Appbar({ page }) {
         </S.ToolbarStyled>
       </S.AppBarStyled>
       {renderMobileMenu}
-    </div>
+      {open && <Message />}
+    </>
   );
 }
 
