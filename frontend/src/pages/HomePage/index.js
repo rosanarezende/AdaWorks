@@ -38,8 +38,8 @@ function HomePage() {
           <S.Image src={diversidade} alt="Mulheres" />
         </S.SectionFour>
 
-        <Bottonbar />
       </PageWrapper>
+        <Bottonbar />
     </>
   );
 }

@@ -1,29 +1,27 @@
 const initialState = {
   open: false,
-  title: "",
-  text: ""
-}
+  text: "",
+  color: "",
+};
 
 const messages = (state = initialState, action) => {
-
   switch (action.type) {
-      
-      case "SET_OPEN":
-          return {
-              ...state,
-              open: action.payload.option
-          }
+    case "SET_OPEN":
+      return {
+        ...state,
+        open: action.payload.option,
+      };
 
-      case "SET_MESSAGE":
-          return {
-              ...state,
-              title:action.payload.title,
-              text: action.payload.text
-          }
+    case "SET_MESSAGE":
+      return {
+        ...state,
+        text: action.payload.text,
+        color: action.payload.color,
+      };
 
-      default:
-          return state;
+    default:
+      return state;
   }
-}
+};
 
-export default messages
+export default messages;

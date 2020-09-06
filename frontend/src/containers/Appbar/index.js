@@ -54,6 +54,10 @@ function Appbar({ page }) {
       buttons = [{ name: "Cadastro", path: routes.signup }];
       break;
 
+    case "signup":
+      linksAppears = true;
+      break;
+
     default:
       break;
   }
@@ -95,7 +99,7 @@ function Appbar({ page }) {
           <S.Logo src={logoImg} alt="logo" onClick={() => dispatch(goToHome)} />
           <S.DivGrow />
           <S.SectionDesktop>{linksAppears && links}</S.SectionDesktop>
-          <S.DivGrow />
+          {buttons.length > 0 && <S.DivGrow /> }
           <S.SectionDesktop>
             {buttons?.map((item, index) => (
               <Button
