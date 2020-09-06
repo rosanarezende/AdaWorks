@@ -6,10 +6,16 @@ import { setOpen, setMessage } from "../../actions/messages";
 import Appbar from "../../containers/Appbar";
 import Bottonbar from "../../containers/Bottonbar";
 import Message from "../../components/Message";
+import InputsWrapper from "../../components/InputsWrapper";
 
 import { PageWrapper } from "../../components/PageWrapper";
 
-import { InputAdornment, FormControl, FormGroup, Checkbox } from "@material-ui/core";
+import {
+  InputAdornment,
+  FormControl,
+  FormGroup,
+  Checkbox,
+} from "@material-ui/core";
 import * as S from "./styles";
 
 function SignupWomanPage() {
@@ -25,8 +31,7 @@ function SignupWomanPage() {
     {
       name: "name",
       label: "Nome",
-      placeholder:
-        formInfo?.role !== "BAND" ? "Nome e Sobrenome" : "Nome da banda",
+      placeholder: "Fulana de tal",
       type: "text",
       pattern: "[a-zA-Zà-úÀ-ú0-9 ]{3,}",
       title: "O nome deve conter apenas letras ou números, no mínimo de 3",
@@ -48,8 +53,8 @@ function SignupWomanPage() {
     },
     {
       name: "nickname",
-      label: "Nickname",
-      placeholder: "nickname",
+      label: "Nome de usuário",
+      placeholder: "fulanadetal",
       type: "text",
       pattern: "[a-zA-Z0-9_]{5,}",
       title:
@@ -101,11 +106,11 @@ function SignupWomanPage() {
 
   const cpfMask = (value) => {
     return value
-      .replace(/\D/g, "") // substitui qualquer caracter que nao seja numero por nada
-      .replace(/(\d{3})(\d)/, "$1.$2") // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
+      .replace(/\D/g, "") 
+      .replace(/(\d{3})(\d)/, "$1.$2") 
       .replace(/(\d{3})(\d)/, "$1.$2")
       .replace(/(\d{3})(\d{1,2})/, "$1-$2")
-      .replace(/(-\d{2})\d+?$/, "$1"); // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+      .replace(/(-\d{2})\d+?$/, "$1");
   };
 
   const getFormInfo = (event) => {
@@ -121,7 +126,10 @@ function SignupWomanPage() {
     event.preventDefault();
     if (!privacy) {
       dispatch(
-        setMessage("É necessário confirmar os termos de uso e a política de privacidade!", "red")
+        setMessage(
+          "É necessário confirmar os termos de uso e a política de privacidade!",
+          "red"
+        )
       );
       dispatch(setOpen(true));
       return;
@@ -144,32 +152,11 @@ function SignupWomanPage() {
       <PageWrapper>
         <Appbar page="signup" />
         <S.Form onSubmit={handleSubmission}>
-          <S.InputsWrapper>
-            {createNewUser.map((field) => {
-              return (
-                <S.Input
-                  key={field.name}
-                  variant="outlined"
-                  margin="normal"
-                  label={field.label}
-                  name={field.name}
-                  placeholder={field.placeholder}
-                  value={formInfo[field.name] || ""}
-                  onChange={getFormInfo}
-                  type={field.type}
-                  required
-                  InputLabelProps={{ shrink: true }}
-                  InputProps={{
-                    endAdornment: field.endAdornment,
-                    inputProps: {
-                      pattern: field.pattern,
-                      title: field.title,
-                    },
-                  }}
-                />
-              );
-            })}
-          </S.InputsWrapper>
+          <InputsWrapper
+            list={createNewUser}
+            formInfo={formInfo}
+            getFormInfo={getFormInfo}
+          />
 
           <S.OptionsWrapper>
             <FormControl component="fieldset">
@@ -201,7 +188,7 @@ function SignupWomanPage() {
           </S.OptionsWrapper>
 
           <S.ButtonWrapper type="submit" variant="contained" color="primary">
-            Criar
+            Cadastrar
           </S.ButtonWrapper>
         </S.Form>
       </PageWrapper>
