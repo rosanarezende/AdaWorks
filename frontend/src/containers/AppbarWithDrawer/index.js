@@ -7,7 +7,6 @@ import { useTheme } from "@material-ui/core/styles";
 import { routes } from "../../routes/constants";
 
 import logoImg from "../../assets/images/logo2.png";
-// import marina from "../../assets/images/marina.png";
 
 import DrawerContent from "./DrawerContent";
 
@@ -20,7 +19,7 @@ import {
 import * as S from "./styles";
 
 function AppbarWithDrawer(props) {
-  const [openDrawer, setOpenDrawer] = useState(false)
+  const [openDrawer, setOpenDrawer] = useState(false);
   const classes = S.useStyles();
   const theme = useTheme();
   const dispatch = useDispatch();
@@ -33,11 +32,23 @@ function AppbarWithDrawer(props) {
     setOpenDrawer(false);
   };
 
-  const user = {
-    name: "Marina Duarte",
-    nickname: "marinaduarte",
-    image: "https://user-images.githubusercontent.com/45580434/92332700-177ad100-f056-11ea-9946-3230e745351b.png"
-  }
+  const user =
+    props.page === "company" || props.page === "company-profile"
+      ? {
+          name: "VTEX",
+          nickname: "vtex",
+          cnpj: "123",
+          plan: "Lovelace",
+          image:
+            "https://user-images.githubusercontent.com/45580434/92342424-377eb480-f097-11ea-9624-aa9c6beb7af7.png",
+        }
+      : {
+          name: "Marina Duarte",
+          nickname: "marinaduarte",
+          image:
+            "https://user-images.githubusercontent.com/45580434/92332700-177ad100-f056-11ea-9946-3230e745351b.png",
+          cpf: "123",
+        };
 
   return (
     <>
@@ -48,7 +59,7 @@ function AppbarWithDrawer(props) {
           className={clsx(classes.appBar, {
             [classes.appBarShift]: openDrawer,
           })}
-          elevation={props.page === "woman-profile" ? 0 : 4}
+          elevation={(props.page === "woman-profile" || props.page === "company-profile") ? 0 : 4}
         >
           <Toolbar>
             <IconButton
@@ -61,7 +72,11 @@ function AppbarWithDrawer(props) {
               <MenuIcon />
             </IconButton>
             <S.DivGrow />
-            <S.Logo src={logoImg} alt="logo" onClick={() => dispatch(push(routes.home))} />
+            <S.Logo
+              src={logoImg}
+              alt="logo"
+              onClick={() => dispatch(push(routes.home))}
+            />
             <S.DivGrow />
           </Toolbar>
         </S.AppBarStyled>
@@ -84,7 +99,7 @@ function AppbarWithDrawer(props) {
               )}
             </IconButton>
           </div>
-          
+
           <DrawerContent user={user} />
         </Drawer>
         <main

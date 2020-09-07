@@ -38,43 +38,100 @@ function DrawerContent({ user }) {
     dispatch(setOpen(true));
   };
 
-  const links = [
-    {
-      name: "Meu perfil",
-      path: `/perfil/${user.nickname}`,
-      icon: meu_perfil,
-    },
-    {
-      name: "Vagas",
-      path: routes.home,
-      icon: vagas,
-    },
-    {
-      name: "Candidaturas",
-      path: routes.home,
-      icon: candidaturas,
-    },
-    {
-      name: "Avaliações",
-      path: routes.home,
-      icon: avaliacoes,
-    },
-    {
-      name: "Buscar empresas",
-      path: routes.searchCompany,
-      icon: buscar_empresas,
-    },
-    {
-      name: "Eventos",
-      path: routes.home,
-      icon: eventos,
-    },
-    {
-      name: "Mentorias",
-      path: routes.home,
-      icon: mentorias,
-    },
-  ];
+  const links =
+    user.cnpj === undefined
+      ? [
+          {
+            name: "Meu perfil",
+            path: `/perfil/${user.nickname}`,
+            icon: meu_perfil,
+          },
+          {
+            name: "Vagas",
+            path: routes.home,
+            icon: vagas,
+          },
+          {
+            name: "Candidaturas",
+            path: routes.home,
+            icon: candidaturas,
+          },
+          {
+            name: "Avaliações",
+            path: routes.home,
+            icon: avaliacoes,
+          },
+          {
+            name: "Buscar empresas",
+            path: routes.searchCompany,
+            icon: buscar_empresas,
+          },
+          {
+            name: "Eventos",
+            path: routes.home,
+            icon: eventos,
+          },
+          {
+            name: "Mentorias",
+            path: routes.home,
+            icon: mentorias,
+          },
+        ]
+      : [
+          {
+            name: "Perfil da empresa",
+            path: `/empresa/${user.nickname}`,
+            icon: meu_perfil,
+          },
+          {
+            name: "Recrutar",
+            path: routes.home,
+            icon: vagas,
+          },
+          {
+            name: "Candidatas",
+            path: routes.home,
+            icon: candidaturas,
+          },
+          {
+            name: "Ver Avaliações",
+            path: routes.home,
+            icon: avaliacoes,
+          },
+          {
+            name: "Buscar empresas",
+            path: routes.home,
+            icon: buscar_empresas,
+          },
+          {
+            name: "Eventos",
+            path: routes.home,
+            icon: eventos,
+          },
+        ];
+
+  const schedules =
+    user.cnpj === undefined
+      ? [
+          {
+            name: "Entrevista XCorp",
+            data: "27 de Outrubro de 2020",
+          },
+          {
+            name: "Workshop 3D Animation",
+            data: "11 de setembro de 2020",
+          },
+        ]
+      : [
+          {
+            name: "Entrevista Marina Duarte",
+            data: "27 de Outrubro de 2020",
+          },
+          {
+            name: "Workshop ecommerce",
+            data: "12 de setembro de 2020",
+          },
+        ];
 
   return (
     <>
@@ -87,6 +144,11 @@ function DrawerContent({ user }) {
           <Typography color="primary" variant="caption">
             Bem-vinda ao AdaWorks!
           </Typography>
+          {user.plan &&
+          <Typography color="primary" variant="body2">
+            Seu plano: <S.Plan>{user.plan}</S.Plan>
+          </Typography>
+          }
         </S.Header>
 
         <S.Links>
@@ -113,33 +175,31 @@ function DrawerContent({ user }) {
         <S.Schedule>
           <Typography variant="h6">Agenda</Typography>
           <List>
-            <ListItem>
-              <ListItemAvatar>
-                <S.ScheduleAvatar
-                  variant="rounded"
-                  alt="agendamento"
-                  src={talk}
-                />
-              </ListItemAvatar>
-              <ListItemText
-                primary="Entrevista XCorp"
-                secondary="27 de Outrubro de 2020"
-              />
-            </ListItem>
-
-            <ListItem>
-              <ListItemAvatar>
-                <S.ScheduleAvatar2
-                  variant="rounded"
-                  alt="agendamento"
-                  src={box}
-                />
-              </ListItemAvatar>
-              <ListItemText
-                primary="Workshop 3D Animation"
-                secondary="11 de setembro de 2020"
-              />
-            </ListItem>
+            {schedules.map((item, index) => {
+              return index % 2 === 0 ? (
+                <ListItem key={index}>
+                  <ListItemAvatar>
+                    <S.ScheduleAvatar
+                      variant="rounded"
+                      alt="agendamento"
+                      src={talk}
+                    />
+                  </ListItemAvatar>
+                  <ListItemText primary={item.name} secondary={item.data} />
+                </ListItem>
+              ) : (
+                <ListItem key={index}>
+                  <ListItemAvatar>
+                    <S.ScheduleAvatar2
+                      variant="rounded"
+                      alt="agendamento"
+                      src={box}
+                    />
+                  </ListItemAvatar>
+                  <ListItemText primary={item.name} secondary={item.data} />
+                </ListItem>
+              );
+            })}
           </List>
         </S.Schedule>
 

@@ -16,7 +16,7 @@ function SearchPage() {
   ];
 
   const handleChange = (e) => {
-    dispatch(push(`/empresa/${e.value}`))
+    dispatch(push(`/buscar/${e.value}`))
   }
 
   return (
