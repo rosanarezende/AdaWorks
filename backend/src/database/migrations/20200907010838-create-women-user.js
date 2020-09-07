@@ -1,8 +1,6 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('factory', { 
+    await queryInterface.createTable('women', { 
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -13,9 +11,9 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      role: {
+      nickname: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       email: {
         type: Sequelize.STRING,
@@ -26,29 +24,23 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      cnpj: {
-        type: Sequelize.INTEGER,
+      description: Sequelize.STRING,
+      cpf: {
+        type: Sequelize.BIGINT,
         allowNull: false
-      },
-      factory_name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      occupation_area: {
-        type: Sequelize.STRING,
-      },
-      description: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      company_polices: {
-        type: Sequelize.ARRAY(Sequelize.JSONB)
       },
       link_for_linkedin: Sequelize.STRING,
+      experiences: {
+        type: Sequelize.ARRAY(Sequelize.JSONB)
+      },
       agree_to_terms: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
         allowNull: false,
+      },
+      apply: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
       created_at: {
         type: Sequelize.DATE,
@@ -60,8 +52,9 @@ module.exports = {
       }
     });
   },
-
+ 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('factory');
+    await queryInterface.dropTable('women');
   }
 };
+

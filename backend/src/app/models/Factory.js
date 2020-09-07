@@ -5,8 +5,9 @@ class Factory extends Model{
   static init(sequelize) {
     super.init({
       name: Sequelize.STRING,
-      email: Sequelize.STRING,
+      nickname: Sequelize.STRING,
       role: Sequelize.STRING,
+      email: Sequelize.STRING,
       password: Sequelize.VIRTUAL,
       password_hash: Sequelize.STRING,
       cnpj: Sequelize.INTEGER,
@@ -16,6 +17,8 @@ class Factory extends Model{
       companyPolices: Sequelize.ARRAY(Sequelize.JSONB),
       linkForLinkedin: Sequelize.STRING,
       agreeToTerms: Sequelize.BOOLEAN,
+      authorization: Sequelize.BOOLEAN,
+      hire: Sequelize.BOOLEAN
     },
     {
       sequelize,
