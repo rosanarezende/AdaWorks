@@ -37,6 +37,12 @@ class JobsController {
     if(!(await schema.isValid(request.body))){
       return response.status(400).json({ error: 'Validation fails'});
     }
+
+    const factoryExists = await Factory.findOne({ where: {id: request.body.factory_id} });
+
+    if(!factoryExists) {
+      return response.status(400).json({error: 'Factory not exists'});
+    }
  
     const {
       id,

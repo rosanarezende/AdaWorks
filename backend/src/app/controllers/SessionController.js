@@ -34,11 +34,10 @@ class SessionController {
       const { id, name} = factory;
 
       return response.json({
-        factory: {
-          id,
-          name,
-          email
-        },
+        id,
+        name,
+        email,
+        isFactory: true,
         token: jwt.sign({ id }, AuthConfig.secret, {
           expiresIn: AuthConfig.expiresIn
         }),
@@ -52,11 +51,10 @@ class SessionController {
     const { id, name } = women;
 
     return response.json({
-      women: {
-        id,
-        name,
-        email
-      },
+      id,
+      name,
+      email,
+      isFactory: false,
       token: jwt.sign({ id }, AuthConfig.secret, {
         expiresIn: AuthConfig.expiresIn
       }),

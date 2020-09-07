@@ -5,6 +5,7 @@ class WomenController {
   async store(request, response) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
+      nickname: Yup.string().required(),
       email: Yup.string().email().required(),
       password: Yup.string().required(),
       description: Yup.string(),
@@ -12,6 +13,7 @@ class WomenController {
       linkForLinkedin: Yup.string(),
       experiences: Yup.array(),
       agreeToTerms: Yup.boolean().required(),
+      apply: Yup.boolean()
     });
  
     if(!(await schema.isValid(request.body))){
@@ -27,6 +29,7 @@ class WomenController {
     const {
       id,
       name,
+      nickname,
       email,
       cpf,
       agreeToTerms
@@ -35,6 +38,7 @@ class WomenController {
     return response.json({
       id,
       name,
+      nickname,
       email,
       cpf,
       agreeToTerms
