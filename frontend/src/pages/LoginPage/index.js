@@ -34,7 +34,13 @@ function LoginPage() {
   function sendUserInfo(e) {
     e.preventDefault();
     // console.log(userInfo)
-    dispatch(push("/perfil/marinaduarte"))
+    
+    if(userInfo.input === "email@vtex.com"){
+      dispatch(push("/empresa/vtex"))
+    } else {
+      dispatch(push("/perfil/marinaduarte"))
+    }
+
     // dispatch(login(userInfo));
   }
 

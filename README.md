@@ -9,6 +9,18 @@ Um hackthon cuja missão foi reunir e incentivar a participação de mulheres no
 
 :dash: [Deploy da aplicação](http://adaworks.surge.sh/)
 
+Para testar a aplicação:
+
+- *versão da mulher*:
+  - _usuário_: marinaduarte@email.com
+  - _senha_: 123456
+
+- *versão da empresa*:
+  - _usuário_: email@vtex.com
+  - _senha_: 123456
+
+<br>
+
 <p align="center">
   <img  height='600' src='https://user-images.githubusercontent.com/45580434/92338644-0480f480-f088-11ea-81f9-09acb0d25519.gif'>
 </p>
