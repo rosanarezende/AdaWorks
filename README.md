@@ -10,7 +10,7 @@ Um hackthon cuja missão foi reunir e incentivar a participação de mulheres no
 :dash: [Deploy da aplicação](http://adaworks.surge.sh/)
 
 <p align="center">
-  <img  height='600' src='https://user-images.githubusercontent.com/45580434/92338644-0480f480-f088-11ea-81f9-09acb0d25519.gif'>
+  <img  height='600' src='https://user-images.githubusercontent.com/45580434/92389248-1fd31a80-f0ef-11ea-9d95-f39041c2a136.gif'>
 </p>
 
 <br>
