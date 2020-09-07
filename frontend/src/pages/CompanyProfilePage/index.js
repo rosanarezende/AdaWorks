@@ -2,107 +2,48 @@ import React from "react";
 
 import AppbarWithDrawer from "../../containers/AppbarWithDrawer";
 
-import experience1 from "../../assets/images/experience1.png";
-import stars from "../../assets/icons/stars.png";
-
-import { Typography } from "@material-ui/core";
 import * as S from "./styles";
 
 function CompanyProfilePage() {
-  const companyNickname = window.location.pathname.substr(9, 29);
-
-  const companiesList = [
-    {
-      name: "Green mobility",
-      nickname: "green-mobility",
-      description: "Mobilidade sustentável",
-      evaluation: 4,
-      logo: experience1,
-      salary: [
-        "Ofeceremos salários competitivos, alinhados com os praticados no mercado.",
-        "Valorizamos e respeitamos a diversidade e igualdade de direitos, oferecendo salários igualitários para homens e mulheres na mesma posição."
-      ],
-      benefits: [
-        "Oferecemos convênio com plano de saúde a todos os funcionários dentro da política de coparticipação."
-      ],
-      careerProgression: [
-        "A cada semestre é realizada uma avaliação de todos os funcionários da empresa, permitindo uma visão geral da performance independentemente do cargo.",
-        "Proporcionamos oportunidades de desenvolvimento profissioal a partir da avaliação realizada e do resultado de desempenho e contribuição da colaboradora para a empresa.",
-        "Estimulamos o aprendizado a partir de cursos, palestras e eventos que visam o compartilhamento de informações e aprendizado geral."
-      ],
-      maternity: [
-        "Tratamos mulheres grávidas da mesma forma que as demais, dando oportunidades de crescimento na empresa e sem congelamento de salários e cargos.",
-        "Oferemos auxílio creche e opção de recreamento para crianças cujas mães eventualmente precisem levar ao trabalho."
-      ],
-    },
-  ];
-
-  const company = companiesList.filter(
-    (item) => item?.nickname === companyNickname
-  )[0];
+  const user = {
+    name: "VTEX",
+    nickname: "vtex",
+    cnpj: "123",
+    plan: "Lovelace",
+    image:
+      "https://user-images.githubusercontent.com/45580434/92342424-377eb480-f097-11ea-9624-aa9c6beb7af7.png",
+    description:
+      "A VTEX fornece plataforma de e-commerce baseada em nuvem e soluções Omnichannel. Conhecida por sua tecnologia de vanguarda e por ser uma plataforma de tempo para receita, a VTEX foi reconhecida pelos analistas do Gartner e Forrester como Líder Global de Comércio Digital. A VTEX está classificada no Quadrante Mágico do Gartner para Comércio Digital.",
+  };
 
   return (
-    <AppbarWithDrawer>
-      {company === undefined ? (
-        <Typography variant="body1" align="center">
-          No momento não temos informações disponíveis sobre a empresa
-          selecionada.
-        </Typography>
-      ) : (
-        <S.PaperStyled>
-          <S.Header>
-            <div>
-              <S.Logo src={company.logo} alt="logo" />
-              <div>
-                <S.CompanyName>Empresa: {company.name}</S.CompanyName>
-                <S.CompanyDescription>
-                  {company.description}
-                </S.CompanyDescription>
-              </div>
-            </div>
-            <div>
-              <S.Evaluation>Avaliação</S.Evaluation>
-              <S.Stars src={stars} alt="avaliação" />
-            </div>
-          </S.Header>
+    <AppbarWithDrawer page="company-profile">
+      <S.Header>
+        <S.AvatarStyled alt={user.name} src={user.image} />
+      </S.Header>
 
-          {company.salary?.length !== 0 && (
-            <S.CardStyled>
-              <S.Title>SALÁRIO</S.Title>
-              {company.salary.map((item, index) => (
-                <S.Text key={index}>- {item}</S.Text>
-              ))}
-            </S.CardStyled>
-          )}
+      <S.ProfileWrapper>
+        <S.Title>{user.name}</S.Title>
+        <S.Text>
+          Plataforma e-commerce <br />
+          Rio de Janeiro
+        </S.Text>
 
-          {company.benefits?.length !== 0 && (
-            <S.CardStyled>
-              <S.Title>BENEFÍCIOS</S.Title>
-              {company.benefits.map((item, index) => (
-                <S.Text key={index}>- {item}</S.Text>
-              ))}
-            </S.CardStyled>
-          )}
+        <S.Text>{user.description}</S.Text>
 
-          {company.careerProgression?.length !== 0 && (
-            <S.CardStyled>
-              <S.Title>PROGRESSÃO DE CARREIRA</S.Title>
-              {company.careerProgression.map((item, index) => (
-                <S.Text key={index}>- {item}</S.Text>
-              ))}
-            </S.CardStyled>
-          )}
+        <S.Text>
+          Site: https://vtex.com/br-pt/ <br />
+          Funcionários: 501 a 1.000 funcionários <br />
+          Fundação: 2000 <br />
+          Tipo de empresa: privada <br />
+        </S.Text>
 
-          {company.maternity?.length !== 0 && (
-            <S.CardStyled>
-              <S.Title>MATERNIDADE</S.Title>
-              {company.maternity.map((item, index) => (
-                <S.Text key={index}>- {item}</S.Text>
-              ))}
-            </S.CardStyled>
-          )}
-        </S.PaperStyled>
-      )}
+        <S.Text>Avaliação:</S.Text>
+
+        <S.Text>Linkedin: https://br.linkedin.com/company/vtex</S.Text>
+
+        <S.Text>Políticas da empresa:</S.Text>
+      </S.ProfileWrapper>
     </AppbarWithDrawer>
   );
 }

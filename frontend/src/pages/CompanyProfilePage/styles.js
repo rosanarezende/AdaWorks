@@ -1,110 +1,54 @@
 import styled from "styled-components";
-import { Paper, Typography, Card } from "@material-ui/core";
-
-export const PaperStyled = styled(Paper)`
-  padding: 2rem 3rem;
-  width: 70vw;
-  margin: 2vh auto;
-
-  @media screen and (max-width: 1200px) {
-    width: 80vw;
-  }
-
-  @media screen and (max-width: 800px) {
-    width: 90vw;
-    padding: 1.5rem;
-  }
-`;
+import { Avatar, Typography } from "@material-ui/core";
 
 export const Header = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  background: #7a8dff;
+  margin: -36px -24px 0;
+  padding: 36px 10vw;
 
-  > div {
+  @media screen and (max-width: 800px) {
     display: flex;
-    align-items: center;
-    @media screen and (max-width: 800px) {
-      margin-bottom: 2vh;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
     justify-content: center;
-    margin-bottom: 1rem;
   }
 `;
 
-export const Logo = styled.img`
-  height: 100px;
-  width: auto;
-  margin-right: 20px;
+export const AvatarStyled = styled(Avatar)`
+  background-color: #a3b0fe;
+  width: 200px;
+  height: auto;
 `;
 
-export const CompanyName = styled(Typography)`
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
-  color: #000000;
-  margin-bottom: 5px;
+export const ProfileWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 9vw 0;
 
-  @media screen and (max-width: 800px) {
-    font-size: 18px;
-    line-height: 21px;
-  }
-`;
-
-export const CompanyDescription = styled(Typography)`
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
-  color: #636363;
-  @media screen and (max-width: 800px) {
-    font-size: 18px;
-    line-height: 21px;
-  }
-`;
-
-export const Evaluation = styled(Typography)`
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  color: #636363;
-  margin-right: 10px;
-`;
-
-export const Stars = styled.img`
-  height: 15px;
-`;
-
-export const CardStyled = styled(Card)`
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  &:last-child{
-    margin-bottom: 0;
-  }
-
-  @media screen and (max-width: 800px) {
-    padding: 1rem;
+  @media screen and (max-width: 1200px) {
+    padding: 5vh 4vw 0;
   }
 `;
 
 export const Title = styled(Typography)`
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
-  text-transform: uppercase;
-  color: #636363;
-  margin-bottom: 1rem;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 75%;
+  color: #000000;
+  margin-bottom: 2vh;
 `;
 
 export const Text = styled(Typography)`
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 150%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 130%;
   color: #636363;
+  margin-bottom: 3vh;
   text-align: justify;
-  margin-bottom: 5px;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 16px;
+  }
 `;

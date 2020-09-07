@@ -27,9 +27,13 @@ export const Header = styled.header`
 export const AvatarStyled = styled(Avatar)`
   background-color: #a3b0fe;
   width: 100px;
-  height: auto;
+  height: 100px;
   margin-bottom: 1vh;
 `;
+
+export const Plan = styled.span`
+  color: #7CD574;
+`
 
 export const Links = styled.nav`
   display: flex;
