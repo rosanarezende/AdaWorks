@@ -81,9 +81,7 @@ Nós da Adaworks realizamos uma pesquisa com 93 mulheres brasileiras atuantes ou
 
 **Avaliação dos concorrentes:**
 
-Para averiguar e destacar o diferencial do nosso produto, analisamos nossos principais concorrentes em termos de: proposta, público-alvo e serviços oferecidos nos âmbitos da comunicação, educação e empregabilidade. 
-
-Partindo da ideia de que todo profissional precisa ser atraído para atuar em uma profissão e se informar sobre ela (comunicação), depois se profissionalizar (educação) para então procurar e passar para uma vaga em acordo com o seu perfil e assim atuar no mercado (empregabilidade). 
+Para averiguar e destacar o diferencial do nosso produto, analisamos nossos principais concorrentes (comunidades voltadas para mulheres da área de T.I. e sites de vagas ou com informações sobre as empresas). Avaliamos em termos de: proposta, público-alvo e serviços oferecidos nos âmbitos da comunicação, educação e empregabilidade. Partindo da ideia de que todo profissional precisa ser atraído para atuar em uma profissão e se informar sobre ela (comunicação), depois se profissionalizar (educação) para então procurar e passar para uma vaga em acordo com o seu perfil e assim atuar no mercado (empregabilidade).
 
 Com base nas informações disponíveis nos respectivos sites, obtivemos as tabelas a seguir:
 
@@ -187,10 +185,10 @@ Com base nas informações disponíveis nos respectivos sites, obtivemos as tabe
   </tr>
   <tr>
     <td class="tg-m5nv">Devs JavaGirl</td>
+    <td class="tg-m5nv">X</td>
     <td class="tg-m5nv"></td>
-    <td class="tg-m5nv"></td>
-    <td class="tg-m5nv"></td>
-    <td class="tg-m5nv"></td>
+    <td class="tg-m5nv">X</td>
+    <td class="tg-m5nv">X</td>
     <td class="tg-m5nv"></td>
   </tr>
   <tr>
@@ -206,9 +204,9 @@ Com base nas informações disponíveis nos respectivos sites, obtivemos as tabe
 
 <br>
 
-_Conclusão_: A Adaworks é uma das raras plataformas que além de dar suporte ás profissionais de T.I., também auxilia as empresas a encontrar as profissionais adequadas ao perfil desejado. Também é uma das poucas que fornece um apoio consistente a mulheres que ainda não são da área de T.I., mas que desejam ingressar nessa área. E além de possui, de maneira diferenciada, todos serviços das demais empresas atuantes no mercado, tem o que é o seu maior diferencial: as avaliações das empresas e de seus ambientes de trabalho pelo ponto de vista feminino. Ao mesmo tempo que proporciona o ambiente adequado a divulgação de vagas e gerenciamento dos processos seletivos.
+Após a analise, concluímos que, a Adaworks é uma das raras plataformas que além de dar suporte ás profissionais de T.I., também auxilia as empresas a encontrar as profissionais adequadas ao perfil desejado. É uma das poucas que fornece um apoio consistente a mulheres que ainda não são da área de T.I., mas que desejam ingressar nessa área. E também, além de possui, de maneira diferenciada, todos serviços das demais empresas atuantes no mercado (comunidades para comunicação entre as mulheres, networking com profissionais consolidadas, meetups, materiais para capacitação a distância, eventos de capacitação presenciais, mentorias, e ponte entre profisisonais e empresas), tem o que é o seu maior diferencial: as avaliações das empresas e de seus ambientes de trabalho pelo ponto de vista feminino. Ao mesmo tempo que proporciona o ambiente adequado a divulgação de vagas e gerenciamento dos processos seletivos.
 
-<br><br>
+<br>
 
 ### SOLUÇÃO
 
@@ -216,7 +214,7 @@ A Adaworks é uma plataforma feita 100% por mulheres para as mulheres que atuam 
 
 Além de dar suporte às profissionais de T.I. e oferecemos apoio consistente a mulheres que querem entrar no mercado, a Adaworks também auxilia as empresas a encontrar as profissionais com o perfil desejado ao proporcionamos um ambiente seguro de divulgação de vagas e gerenciamento dos processos seletivos. Entretanto, o nosso maior diferencial é apresentar avaliações de empresas e seus ambientes de trabalho sob o ponto de vista feminino, permitindo que as empresas deixem suas políticas expostas e, assim as mulheres, fiquem mais seguras do caminho que estão escolhendo para as suas carreiras.
 
-<br><br>
+<br>
 
 ## Equipe
 
