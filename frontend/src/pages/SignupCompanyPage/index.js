@@ -178,13 +178,15 @@ function SignupCompanyPage() {
       confirm,
     } = formInfo;
     const data = {
-      companyName,
+      factoryName: companyName,
       cnpj,
       name,
-      positionInCompany,
+      role: positionInCompany,
       email,
       nickname,
       password,
+      agreeToTerms: privacy,
+      authorization,
       hire,
     };
     if (password !== confirm) {
@@ -209,7 +211,7 @@ function SignupCompanyPage() {
           de T.I.
         </S.Title>
 
-        <Pricing setFormAppears={setFormAppears} formAppears={formAppears}/>
+        <Pricing setFormAppears={setFormAppears} formAppears={formAppears} />
 
         {formAppears && (
           <S.Form onSubmit={handleSubmission}>

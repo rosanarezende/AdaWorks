@@ -5,5 +5,6 @@ export const routes = {
   signupCompany: "/cadastro-empresa",
   signupWoman: "/cadastro-mulher",
   womanProfile: "/perfil/:username",
-  companyProfile: "/empresa/:companyname"
+  companyProfile: "/empresa/:companyname",
+  searchCompany: "/buscar"
 };

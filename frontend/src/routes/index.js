@@ -11,6 +11,8 @@ import SignupPage from "../pages/SignupPage";
 import SignupCompanyPage from "../pages/SignupCompanyPage";
 import SignupWomanPage from "../pages/SignupWomanPage";
 import WomanProfilePage from "../pages/WomanProfilePage";
+import SearchPage from "../pages/SearchPage";
+import CompanyProfilePage from "../pages/CompanyProfilePage";
 
 function Routes(props) {
 	const { history } = props
@@ -24,6 +26,8 @@ function Routes(props) {
         <Route exact path={routes.signupCompany} component={SignupCompanyPage} />
         <Route exact path={routes.signupWoman} component={SignupWomanPage} />
         <Route exact path={routes.womanProfile} component={WomanProfilePage} />
+        <Route exact path={routes.searchCompany} component={SearchPage} />
+        <Route exact path={routes.companyProfile} component={CompanyProfilePage} />
 
         <Route path="*" component={NotFoundPage} />
       </Switch>

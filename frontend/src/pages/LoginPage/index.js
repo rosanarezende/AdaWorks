@@ -33,7 +33,7 @@ function LoginPage() {
 
   function sendUserInfo(e) {
     e.preventDefault();
-    console.log(userInfo)
+    // console.log(userInfo)
     dispatch(push("/perfil/marinaduarte"))
     // dispatch(login(userInfo));
   }

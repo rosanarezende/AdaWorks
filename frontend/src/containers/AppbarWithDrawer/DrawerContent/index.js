@@ -61,7 +61,7 @@ function DrawerContent({ user }) {
     },
     {
       name: "Buscar empresas",
-      path: routes.home,
+      path: routes.searchCompany,
       icon: buscar_empresas,
     },
     {

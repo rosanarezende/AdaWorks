@@ -136,7 +136,15 @@ function SignupWomanPage() {
     }
 
     const { name, cpf, email, nickname, password, confirm } = formInfo;
-    const data = { name, cpf, email, nickname, password, apply };
+    const data = { 
+      name, 
+      cpf, 
+      email, 
+      nickname, 
+      password, 
+      apply, 
+      agreeToTerms: privacy 
+    };
     if (password !== confirm) {
       dispatch(setMessage("Senhas não conferem!", "red"));
       dispatch(setOpen(true));
