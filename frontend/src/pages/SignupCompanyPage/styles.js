@@ -1,15 +1,19 @@
 import styled from "styled-components";
-import { Button, FormControlLabel } from "@material-ui/core";
+import { Button, FormControlLabel, Typography } from "@material-ui/core";
+
+export const Title = styled(Typography)`
+  margin: 5vh 0;
+`
 
 export const Form = styled.form`
   min-height: 60vh;
   display: flex;
   flex-direction: column;
-  padding: 5vh 0;
+  padding-bottom: 5vh;
 
   @media screen and (max-width: 1200px) {
     min-height: 67vh;
-    padding: 2vh 0;
+    padding-bottom: 2vh;
   }
 `;
 
