@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Paper, Typography, Card } from "@material-ui/core";
 
 export const PaperStyled = styled(Paper)`
-  padding: 3rem;
+  padding: 2rem 3rem;
   width: 70vw;
   margin: 2vh auto;
 
@@ -21,7 +21,7 @@ export const Header = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   > div {
     display: flex;
@@ -81,7 +81,10 @@ export const Stars = styled.img`
 
 export const CardStyled = styled(Card)`
   padding: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  &:last-child{
+    margin-bottom: 0;
+  }
 
   @media screen and (max-width: 800px) {
     padding: 1rem;
