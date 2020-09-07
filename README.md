@@ -43,7 +43,7 @@ Para testar a aplicação:
 <br>
 
 ## Escopo do projeto
-<br>
+
 
 ### PROBLEMÁTICA
 
@@ -53,7 +53,7 @@ O **desafio da inclusão** é um obstáculo a ser vencido. Para isso, convidamos
 >
 > -- <cite>(VTEX, Mega Hack Women, 2020)</cite>
 
-<br><br>
+<br>
 
 ### PESQUISA DE MERCADO
 
@@ -89,18 +89,6 @@ Com base nas informações disponíveis nos respectivos sites, obtivemos as tabe
 
 <br>
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-k8z9{background-color:#cbcefb;border-color:inherit;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-s8l9{background-color:#6665cd;border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-rsho{background-color:#cbcefb;border-color:inherit;color:#000000;text-align:center;vertical-align:top}
-.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-</style>
 <table class="tg">
 <thead>
   <tr>
@@ -149,21 +137,6 @@ Com base nas informações disponíveis nos respectivos sites, obtivemos as tabe
 
 <br>
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-m5nv{border-color:#656565;text-align:center;vertical-align:top}
-.tg .tg-nicw{background-color:#6434fc;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-9hqe{background-color:#9aff99;border-color:#656565;text-align:center;vertical-align:top}
-.tg .tg-a6fy{background-color:#ffffff;border-color:#656565;text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-feq9{background-color:#9698ed;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-x9uu{border-color:#656565;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-zcd2{background-color:#ffffff;border-color:#656565;color:#9aff99;text-align:center;vertical-align:top}
-</style>
 <table class="tg">
 <thead>
   <tr>
@@ -182,24 +155,24 @@ Com base nas informações disponíveis nos respectivos sites, obtivemos as tabe
   </tr>
   <tr>
     <td class="tg-x9uu">ADAWORKS</td>
-    <td class="tg-9hqe"></td>
-    <td class="tg-9hqe"></td>
-    <td class="tg-9hqe"></td>
-    <td class="tg-9hqe"></td>
-    <td class="tg-9hqe"></td>
+    <td class="tg-9hqe">X</td>
+    <td class="tg-9hqe">X</td>
+    <td class="tg-9hqe">X</td>
+    <td class="tg-9hqe">X</td>
+    <td class="tg-9hqe">X</td>
   </tr>
   <tr>
     <td class="tg-m5nv">WoMakersCode</td>
     <td class="tg-a6fy"></td>
-    <td class="tg-9hqe"></td>
+    <td class="tg-9hqe">X</td>
     <td class="tg-zcd2"></td>
     <td class="tg-zcd2"></td>
     <td class="tg-zcd2"></td>
   </tr>
   <tr>
     <td class="tg-m5nv">Cloud Girls</td>
-    <td class="tg-9hqe"></td>
-    <td class="tg-9hqe"></td>
+    <td class="tg-9hqe">X</td>
+    <td class="tg-9hqe">X</td>
     <td class="tg-a6fy"></td>
     <td class="tg-a6fy"></td>
     <td class="tg-zcd2"></td>
@@ -223,7 +196,7 @@ Com base nas informações disponíveis nos respectivos sites, obtivemos as tabe
   <tr>
     <td class="tg-m5nv">Reprograma</td>
     <td class="tg-m5nv"></td>
-    <td class="tg-9hqe"></td>
+    <td class="tg-9hqe">X</td>
     <td class="tg-m5nv"></td>
     <td class="tg-m5nv"></td>
     <td class="tg-m5nv"></td>
