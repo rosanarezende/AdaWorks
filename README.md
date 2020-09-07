@@ -7,12 +7,10 @@ Um hackthon cuja missão foi reunir e incentivar a participação de mulheres no
 
 # Adaworks
 
-:dash: [Deploy da aplicação](link)
-
-[Documentação da API](xxx)
+:dash: [Deploy da aplicação](http://adaworks.surge.sh/)
 
 <p align="center">
-  <img  height='600' src='xxx'>
+  <img  height='600' src='https://user-images.githubusercontent.com/45580434/92338644-0480f480-f088-11ea-81f9-09acb0d25519.gif'>
 </p>
 
 <br>
@@ -60,7 +58,8 @@ Gabriella Feliciano
 ### Marketing
 
 <div align="center">
-[<img src="" width=115><br><sub>Camille Labanca</sub>](link) |
+
+[<img src="https://media-exp1.licdn.com/dms/image/C4D03AQEu4vtjOZTbBw/profile-displayphoto-shrink_400_400/0?e=1605139200&v=beta&t=lupiNlIDpADveCVZ7x-Mhz5Ech2VUlr7y73wZOG60-M" width=115><br><sub>Camille Thomaz Labanca</sub>](https://www.linkedin.com/in/camillelabanca/) |
 | :---:
 </div>
 
