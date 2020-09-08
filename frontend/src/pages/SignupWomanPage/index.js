@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { setOpen, setMessage } from "../../actions/messages";
+import { signupWoman } from "../../actions/woman";
 
 import Appbar from "../../containers/Appbar";
 import Bottonbar from "../../containers/Bottonbar";
@@ -106,8 +107,8 @@ function SignupWomanPage() {
 
   const cpfMask = (value) => {
     return value
-      .replace(/\D/g, "") 
-      .replace(/(\d{3})(\d)/, "$1.$2") 
+      .replace(/\D/g, "")
+      .replace(/(\d{3})(\d)/, "$1.$2")
       .replace(/(\d{3})(\d)/, "$1.$2")
       .replace(/(\d{3})(\d{1,2})/, "$1-$2")
       .replace(/(-\d{2})\d+?$/, "$1");
@@ -136,24 +137,24 @@ function SignupWomanPage() {
     }
 
     const { name, cpf, email, nickname, password, confirm } = formInfo;
-    const data = { 
-      name, 
-      cpf, 
-      email, 
-      nickname, 
-      password, 
-      apply, 
-      agreeToTerms: privacy 
+    const cpfFormatted = Number(
+      cpf.replace(".", "").replace(".", "").replace("-", "")
+    );
+    const data = {
+      name,
+      cpf: cpfFormatted,
+      email,
+      nickname,
+      password,
+      apply,
+      agreeToTerms: privacy,
     };
     if (password !== confirm) {
       dispatch(setMessage("Senhas não conferem!", "red"));
       dispatch(setOpen(true));
     } else {
-      console.log(data);
-      dispatch(setMessage("Funcionalidade ainda não finalizada", "red"));
-      dispatch(setOpen(true));
-      // dispatch(signup(data))
-      // setFormInfo({})
+      dispatch(signupWoman(data));
+      setFormInfo({});
     }
   };
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { setOpen, setMessage } from "../../actions/messages";
+import { signupCompany } from "../../actions/company";
 
 import Appbar from "../../containers/Appbar";
 import Bottonbar from "../../containers/Bottonbar";
@@ -76,9 +77,9 @@ function SignupCompanyPage() {
       label: "Nome de usuário da empresa",
       placeholder: "empresatal",
       type: "text",
-      pattern: "[a-zA-Z0-9_]{5,}",
+      pattern: "[a-zA-Z0-9_]{4,}",
       title:
-        "O nickname deve conter no mínimo 5 caracteres (letras, números ou _), sem espaços.",
+        "O nickname deve conter no mínimo 4 caracteres (letras, números ou _), sem espaços.",
     },
     {
       name: "password",
@@ -177,9 +178,10 @@ function SignupCompanyPage() {
       password,
       confirm,
     } = formInfo;
+    const cnpjFormatted = Number(cnpj.replace(/[^\d]+/g, ""));
     const data = {
       factoryName: companyName,
-      cnpj,
+      cnpj: cnpjFormatted,
       name,
       role: positionInCompany,
       email,
@@ -193,11 +195,8 @@ function SignupCompanyPage() {
       dispatch(setMessage("Senhas não conferem!", "red"));
       dispatch(setOpen(true));
     } else {
-      console.log(data);
-      dispatch(setMessage("Funcionalidade ainda não finalizada", "red"));
-      dispatch(setOpen(true));
-      // dispatch(signup(data))
-      // setFormInfo({})
+      dispatch(signupCompany(data))
+      setFormInfo({})
     }
   };
 

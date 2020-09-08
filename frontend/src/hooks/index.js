@@ -1,18 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getProfile } from "../actions/session";
 
-export const useUser = () => {
-  const [userRole, setUserRole] = useState("")
-  const [userName, setUserName] = useState("")
+export const useProfile = () => {
+  const dispatch = useDispatch();
+  const { profile } = useSelector((state) => state.session);
 
   useEffect(() => {
-      const role = localStorage.getItem("userRole")
-      const name = localStorage.getItem("userName")
-      setUserRole(role)
-      setUserName(name)
-  }, [userRole, userName])
+    dispatch(getProfile());
+  }, [dispatch]);
 
-  return {
-      userRole,
-      userName
-  }
-}
+  return profile;
+};
