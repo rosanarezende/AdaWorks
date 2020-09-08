@@ -18,6 +18,13 @@ export const AvatarStyled = styled(Avatar)`
   height: auto;
 `;
 
+export const ExperienceLogo = styled(Avatar)`
+  background-color: #a3b0fe;
+  width: 70px;
+  height: auto;
+  margin: 0 20px 4vh 0;
+`;
+
 export const ProfileWrapper = styled.div`
   display: flex;
   flex-direction: column;

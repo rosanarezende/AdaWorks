@@ -5,6 +5,7 @@ import { push } from "connected-react-router";
 import { useTheme } from "@material-ui/core/styles";
 
 import { routes } from "../../routes/constants";
+import { useProfile } from '../../hooks'
 
 import logoImg from "../../assets/images/logo2.png";
 
@@ -23,6 +24,7 @@ function AppbarWithDrawer(props) {
   const classes = S.useStyles();
   const theme = useTheme();
   const dispatch = useDispatch();
+  const profile = useProfile()
 
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
@@ -42,13 +44,7 @@ function AppbarWithDrawer(props) {
           image:
             "https://user-images.githubusercontent.com/45580434/92342424-377eb480-f097-11ea-9624-aa9c6beb7af7.png",
         }
-      : {
-          name: "Marina Duarte",
-          nickname: "marinaduarte",
-          image:
-            "https://user-images.githubusercontent.com/45580434/92332700-177ad100-f056-11ea-9946-3230e745351b.png",
-          cpf: "123",
-        };
+      : profile;
 
   return (
     <>

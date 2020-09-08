@@ -12,11 +12,11 @@ Um hackthon cuja missão foi reunir e incentivar a participação de mulheres no
 Para testar a aplicação:
 
 - *versão da mulher*:
-  - _usuário_: marinaduarte@email.com
-  - _senha_: 123456
+  - _usuário_: marinaduarte@gmail.com
+  - _senha_: 1234567
 
 - *versão da empresa*:
-  - _usuário_: email@vtex.com
+  - _usuário_: contato@vtex.com
   - _senha_: 123456
 
 <br>

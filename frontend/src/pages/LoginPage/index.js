@@ -4,6 +4,8 @@ import { push } from "connected-react-router";
 
 import { routes } from "../../routes/constants";
 
+import { login } from "../../actions/session";
+
 import Appbar from "../../containers/Appbar";
 import Bottonbar from "../../containers/Bottonbar";
 
@@ -16,8 +18,8 @@ import * as S from "./styles";
 
 function LoginPage() {
   const [userInfo, setUserInfo] = useState({
-    input: "marinaduarte@email.com",
-    password: "123456"
+    input: "marinaduarte@gmail.com",
+    password: "1234567",
   });
   const [hidenPassword, setHidenPassword] = useState(false);
   const dispatch = useDispatch();
@@ -33,15 +35,20 @@ function LoginPage() {
 
   function sendUserInfo(e) {
     e.preventDefault();
-    // console.log(userInfo)
-    
-    if(userInfo.input === "email@vtex.com"){
-      dispatch(push("/empresa/vtex"))
-    } else {
-      dispatch(push("/perfil/marinaduarte"))
+    const { input, password } = userInfo
+    const loginData = {
+      email: input,
+      password
     }
 
-    // dispatch(login(userInfo));
+    // if (userInfo.input === "email@vtex.com") {
+    //   dispatch(push("/empresa/vtex"));
+    // } else {
+    //   dispatch(push("/perfil/marinaduarte"));
+    // }
+
+    dispatch(login(loginData));
+    // setUserInfo({});
   }
 
   return (
@@ -106,13 +113,14 @@ function LoginPage() {
             </S.ButtonWrapper>
 
             <Typography color="primary" gutterBottom>
-              Não tem conta? <S.Link color="primary" onClick={goToSignUp}>Cadastre-se!</S.Link>
+              Não tem conta?{" "}
+              <S.Link color="primary" onClick={goToSignUp}>
+                Cadastre-se!
+              </S.Link>
             </Typography>
-
           </S.Form>
           <S.Image src={florest} alt="Mulher na floresta" />
         </S.LoginWrapper>
-
       </PageWrapper>
       <Bottonbar />
     </>
